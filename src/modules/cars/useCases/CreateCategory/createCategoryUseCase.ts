@@ -1,3 +1,4 @@
+import { AppError } from "../../../../errors/AppError";
 import { inject, injectable } from "tsyringe";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
@@ -19,7 +20,7 @@ class CreateCategoryUseCase {
     );
 
     if (categoryAlredyExists) {
-      throw new Error("Categoria já Existe");
+      throw new AppError("Categoria já Existe");
     }
 
     this.categoriesRepository.create({ name, description });
