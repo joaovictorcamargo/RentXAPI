@@ -3,7 +3,7 @@
     "target": "es2017",
     "module": "commonjs",
     "rootDir": "./",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "outDir": "./dist",
     "paths": {
       "@modules/*": ["modules/*"],
